@@ -32,33 +32,21 @@ const getAllTitles = () => {
     console.log(x);
 }
 
-
-
-
-sessionStorage.setItem('return', res);
-
-const x = sessionStorage.getItem('return');
-
-console.log(x);
-
-
-
 // t=title;
 // y=year;
 // i=id;
 
-
 // create table
-// function generateTableHead(table, data) {
-//   let thead = table.createTHead();
-//   let row = thead.insertRow();
-//   for (let key of data) {
-//     let th = document.createElement("th");
-//     let text = document.createTextNode(key);
-//     th.appendChild(text);
-//     row.appendChild(th);
-//   }
-// }
-// let table = document.querySelector("table");
-// let data = Object.keys(mountains[0]);
-// generateTableHead(table, data);
+function generateTableHead(table, data) {
+  let thead = table.createTHead();
+  let row = thead.insertRow();
+  for (let key of data) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+  }
+}
+let table = document.querySelector("table");
+let data = Object.keys(mountains[0]);
+generateTableHead(table, data);
