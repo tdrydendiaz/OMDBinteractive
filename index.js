@@ -21,14 +21,11 @@ const getAllTitles = () => {
         let res = document.getElementById("getAllTitles");
         res.innerHTML = req.responseText;
     }
-    req.open("GET", "http://www.omdbapi.com/?t=superman&apikey=fcfa066c")
+    req.open("GET", "http://www.omdbapi.com/?t=&apikey=fcfa066c")
     req.send();
 
-
     sessionStorage.setItem('return', res);
-
     const x = sessionStorage.getItem('return');
-
     console.log(x);
 }
 
